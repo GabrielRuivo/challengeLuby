@@ -14,7 +14,7 @@ import Loader from '../../assets/loaders.gif';
 function Login() {
 
   const [ /* userName */, setUserName ] = useContext(DataContexts);
-  const [ userData , setUserData ] = useContext(DataContexts);
+  const [ /* userData */ , setUserData ] = useContext(DataContexts);
 
   const [ inputValue, setInputValue ] = useState('');
   const [ loading, setLoading ] = useState(false);

@@ -14,7 +14,7 @@ export const Container = styled.div`
     position: absolute;
     top: 0;
     margin-top: 80%;
-    margin-left: 40%;
+    margin-left: 35%;
   }
 `;
 export const Main = styled.div`

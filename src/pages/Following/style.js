@@ -8,6 +8,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .loader {
+    position: absolute;
+    top: 0;
+    margin-top: 80%;
+    margin-left: 35%;
+  }
+
 `;
 export const Main = styled.div`
   width: 100%;
@@ -30,7 +38,6 @@ export const Follow = styled.div`
   border-bottom: 1px solid rgba(250, 250, 250, 0.1);
 
   .div-tag-img {
-
     display: flex;
     align-items: center;
     width: 50%;

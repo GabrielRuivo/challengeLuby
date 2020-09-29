@@ -1,11 +1,7 @@
 import React, { useContext } from 'react';
-
 import {FiLogOut} from 'react-icons/fi';
-
 import { useHistory } from 'react-router-dom';
-
 import { DataContexts } from '../../contexts/DataContexts'; 
-
 import MenuBar from '../../components/MenuBar';
 
 import {

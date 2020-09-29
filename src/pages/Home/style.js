@@ -149,14 +149,12 @@ export const Bio = styled.div`
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0rem;
+  margin-top: 30px;
   
 
   .div-bio {
-    background-color: red;
     width: 100%;
     height: 7rem;
-    
-
     p {
       margin-left: 25px;
       font-size: 15px;

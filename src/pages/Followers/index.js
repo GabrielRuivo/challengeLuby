@@ -1,25 +1,20 @@
 import React, {useContext, useState} from 'react';
-
 import Header from '../../components/Header';
 import MenuBar from '../../components/MenuBar';
-
 import { useHistory } from 'react-router-dom';
-
 import { FiArrowRight } from 'react-icons/fi';
-
+import Loader from '../../assets/loaders.gif';
 import { DataContexts } from '../../contexts/DataContexts'; 
 import { NewDataContexts } from '../../contexts/NewDataContexts'; 
-
 import { Container, Main, Follow } from './style';
 import api from '../../services/api';
 
 
 function Followers() {
-  const [ userData, setUserData ] = useContext(DataContexts);
-  const [ userName,  setUserName ] = useContext(DataContexts);
-  const [ newUserData,  setNewUserData ] = useContext(NewDataContexts);
-  /* const [ loading, setLoading ] = useState(false);
-  const [ error, setError ] = useState(false); */
+  const [ userData, /* setUserData */ ] = useContext(DataContexts);
+  const [ /* newUserData */,  setNewUserData ] = useContext(NewDataContexts);
+  const [ loading, setLoading ] = useState(false);
+  const [ /* error */, setError ] = useState(false);
   
   const numberFollowers = userData.followers.number;
   const AllFollowers = userData.followers.info.data;
@@ -30,8 +25,8 @@ function Followers() {
     
     async function HomeFollow(login){
     
-      /* setLoading(true)
-      setError(false) */
+      setLoading(true)
+      setError(false)
       const request = api.get(`users/${login}`)
       const response = await request;
       console.log(response.status)
@@ -55,7 +50,7 @@ function Followers() {
       console.log(AllRepos)
   
       if (response.status === 200 ) {
-        /* setLoading(false) */
+        setLoading(false)
         const dataFollowUser = {
           login: response.data.login,
           name: response.data.name,
@@ -87,17 +82,16 @@ function Followers() {
     <Container>
       <Header number={numberFollowers} title="seguidores" />
       <Main  >
-        {/* {
+        {
           loading
           ? <img src={Loader} alt="loading..." className="loader"  />
           : ''
-        } */}
+        }
         {
           AllFollowers.map( follow => (
             <Follow 
               onClick={() => HomeFollow(
-                follow.login,
-                follow.avatar_url,
+                follow.login
               )} 
               key={follow.id} 
             >

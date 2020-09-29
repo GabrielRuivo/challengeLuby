@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 
 import {FiLogIn} from 'react-icons/fi';
 
@@ -20,8 +20,8 @@ import {
 
 function HomeFollow() {
 
-  const [ userData, setUserData ] = useContext(DataContexts);
-  const [ newUserData, setNewUserData ] = useContext(NewDataContexts);
+  const [ /* userData */, setUserData ] = useContext(DataContexts);
+  const [ newUserData, /* setNewUserData */ ] = useContext(NewDataContexts);
   
   const history = useHistory();
 
