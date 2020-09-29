@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import Repositories from './pages/Repositories';
 import Followers from './pages/Followers';
 import Following from './pages/Following';
+import HomeFollow from './pages/Home/HomeFollow';
+import LogicTest from './logicTest';
  
 export default function Routes() {
   return (
@@ -16,6 +18,8 @@ export default function Routes() {
         <Route path="/repositories" component={Repositories} />
         <Route path="/followers" component={Followers} />
         <Route path="/following" component={Following} />
+        <Route path="/home-follow" component={HomeFollow} />
+        <Route path="/test" component={LogicTest} />
       </Switch>
     </BrowserRouter>
   )

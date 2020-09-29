@@ -2,14 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import GlobalStyles from './styles/global';
 import Routes from './routes';
-import DataContextProvider from './contexts/DataContexts';
+import DataContextsProvider from './contexts/DataContexts';
+import NewDataContextsProvider from './contexts/NewDataContexts';
 
 ReactDOM.render(
   <React.StrictMode>
-    <DataContextProvider>
-      <Routes />
-      <GlobalStyles />
-    </DataContextProvider>
+    <DataContextsProvider>
+      <NewDataContextsProvider>
+        <Routes />
+        <GlobalStyles />
+     </NewDataContextsProvider>
+    </DataContextsProvider>
   </React.StrictMode>,
 document.getElementById('root')
 );

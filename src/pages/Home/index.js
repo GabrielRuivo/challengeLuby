@@ -19,9 +19,8 @@ import {
 
 function Home() {
 
-  /* const [userName] = useContext(DataContexts); */
   const [userData, setUserData] = useContext(DataContexts);
-   
+  
   const history = useHistory();
 
   function Logout () {
@@ -77,11 +76,13 @@ function Home() {
         </InfosGithub>
 
         <Bio>
-          <div className="div-tag-bio" >
-            <span className="tag-yellow"/>
-            <p className="title-bio" >BIO</p>
+          <div className="div-bio" >
+            <div className="div-tag-bio" >
+              <span className="tag-yellow"/>
+              <p className="title-bio" >BIO</p>
+            </div>
+            <p>{userData.bio}</p>
           </div>
-          <p>{userData.bio}</p>
         </Bio>
       </Main>
       <MenuBar />

@@ -28,9 +28,9 @@ export const Header = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
 
-    .icon-out {
+    .icon-save {
       margin-left: 5px;
-      color: #d03434;
+      color: #228b22;
       cursor: pointer;
     }
   }
@@ -149,20 +149,18 @@ export const Bio = styled.div`
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0rem;
-  
 
   .div-bio {
     background-color: red;
     width: 100%;
     height: 7rem;
-    
 
     p {
-      margin-left: 25px;
-      font-size: 15px;
-      color: #ddd;
-    }
-  
+    margin-left: 25px;
+    font-size: 15px;
+    color: #ddd;
+  }
+
   .div-tag-bio {
 
     display: flex;
@@ -189,5 +187,6 @@ export const Bio = styled.div`
   }
   }
 
+  
 `;
 

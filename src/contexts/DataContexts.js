@@ -9,7 +9,7 @@ export default function DataContextsProvider({ children }) {
   return (
     <DataContexts.Provider 
       value={[
-        userName, 
+        userName,
         setUserName, 
         userData, 
         setUserData, 

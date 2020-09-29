@@ -32,6 +32,9 @@ export const Home = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  :target {
+    color: red;
+  }
 `;
 export const Repos = styled.div`
   display: flex;
