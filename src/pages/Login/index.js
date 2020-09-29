@@ -36,19 +36,19 @@ function Login() {
         const response = await request;
         
 
-        const requestFollowers = api.get(`users/${inputValue}/followers?page=1&per_page=1`);
+        const requestFollowers = api.get(`users/${inputValue}/followers?page=1&per_page=100`);
         const responseFollowers = await requestFollowers;
         const NumberFollowers = parseFloat(responseFollowers.data.length);
         const AllFollowers = (responseFollowers)
         
 
-        const requestFollowing = api.get(`users/${inputValue}/following?page=1&per_page=1`);
+        const requestFollowing = api.get(`users/${inputValue}/following?page=1&per_page=100`);
         const responseFollowing = await requestFollowing;
         const NumberFollowing = parseFloat(responseFollowing.data.length);
         const AllFollowing = (responseFollowing)
         
 
-        const requestRepos = api.get(`users/${inputValue}/repos?page=1&per_page=1`);
+        const requestRepos = api.get(`users/${inputValue}/repos?page=1&per_page=100`);
         const responseRepos = await requestRepos;
         const NumberRepos = parseFloat(responseRepos.data.length);
         const AllRepos = responseRepos.data;

@@ -40,7 +40,6 @@ export const Container = styled.div`
       border-radius: 10px;
       padding: 0 10px;
       font-size: 17px;
-
     }
 
     button {

@@ -31,6 +31,18 @@ function HomeFollow() {
     history.push("/home");
   }
 
+  function RedrectFollowers(){
+    history.push('/followers');
+  }
+
+  function RedrectFollowing(){
+    history.push('/following');
+  }
+
+  function RedrectRepos(){
+    history.push('/repositories');
+  }
+
   return(
     <Container>
       <Header>
@@ -52,15 +64,15 @@ function HomeFollow() {
         </PersonalInfos>
 
         <InfosGithub >
-          <div /* onClick={RedrectFollowers}  */className="followers" >
+          <div onClick={RedrectFollowers} className="followers" >
             <p className="number" >{newUserData.followers.number}</p>
             <p className="text" >Seguidores</p>
           </div>
-          <div /* onClick={RedrectFollowing} */ className="following" >
+          <div onClick={RedrectFollowing} className="following" >
             <p className="number" >{newUserData.following.number}</p>
             <p className="text" >Seguindo</p>
           </div>
-          <div /* onClick={RedrectRepos} */ className="repositories" >
+          <div onClick={RedrectRepos} className="repositories" >
             <p className="number" >{newUserData.repos.number}</p>
             <p className="text" >Repos</p>
           </div>

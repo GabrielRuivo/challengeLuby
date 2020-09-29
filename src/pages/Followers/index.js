@@ -14,7 +14,7 @@ function Followers() {
   const [ userData, /* setUserData */ ] = useContext(DataContexts);
   const [ /* newUserData */,  setNewUserData ] = useContext(NewDataContexts);
   const [ loading, setLoading ] = useState(false);
-  const [ /* error */, setError ] = useState(false);
+  const [ error, setError ] = useState(false);
   
   const numberFollowers = userData.followers.number;
   const AllFollowers = userData.followers.info.data;
@@ -31,26 +31,26 @@ function Followers() {
       const response = await request;
       console.log(response.status)
   
-      const requestFollowers = api.get(`users/${login}/followers?page=1&per_page=1`);
+      const requestFollowers = api.get(`users/${login}/followers?page=1&per_page=100`);
       const responseFollowers = await requestFollowers;
       const NumberFollowers = parseFloat(responseFollowers.data.length);
       const AllFollowers = (responseFollowers)
       console.log(AllFollowers)
   
-      const requestFollowing = api.get(`users/${login}/following?page=1&per_page=1`);
+      const requestFollowing = api.get(`users/${login}/following?page=1&per_page=100`);
       const responseFollowing = await requestFollowing;
       const NumberFollowing = parseFloat(responseFollowing.data.length);
       const AllFollowing = (responseFollowing)
       console.log(AllFollowing)
   
-      const requestRepos = api.get(`users/${login}/repos?page=1&per_page=1`);
+      const requestRepos = api.get(`users/${login}/repos?page=1&per_page=100`);
       const responseRepos = await requestRepos;
       const NumberRepos = parseFloat(responseRepos.data.length);
       const AllRepos = responseRepos.data;
       console.log(AllRepos)
   
       if (response.status === 200 ) {
-        setLoading(false)
+        /* setLoading(false) */
         const dataFollowUser = {
           login: response.data.login,
           name: response.data.name,
@@ -106,12 +106,17 @@ function Followers() {
             </Follow>
           ) )
         }
+        {
+          error 
+          ? alert('Ops, houve algo de errado. Recarregue a página.')
+          : ''
+        }
       </Main>
       <MenuBar />
     </Container>
   ); 
   } catch {
-
+    setError(true)
   }
 }
 

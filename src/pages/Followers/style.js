@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
   background: #272727;
@@ -36,14 +37,19 @@ export const Follow = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
   border-bottom: 1px solid rgba(250, 250, 250, 0.1);
-
+  transition: 1s;
   cursor: pointer;
+
+  &:hover {
+    background: ${shade(0.2, '#272727' )}
+  }
 
   .div-tag-img {
 
     display: flex;
     align-items: center;
     width: 50%;
+    transition: 1s;
 
     .tag-yellow {
       height: 2.5rem;
