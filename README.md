@@ -7,9 +7,6 @@
 
 <div align="center" >
   <div>
-    <img src="./src/assets/githubSearch.gif" alt="gif-pwa" height="420" >
-  </div>
-  <div>
     <img src="./src/assets/login.png" alt="login" height="420"  >
     <img src="./src/assets/home.png" alt="home" height="420"  >
     <img src="./src/assets/repos.png" alt="repos" height="420" >
@@ -17,6 +14,7 @@
   <div>
     <img src="./src/assets/followers.png" alt="followers" height="420"  >
     <img src="./src/assets/following.png" alt="following" height="420" >
+    <img src="./src/assets/githubSearch.gif" alt="gif-pwa" height="420" >
   <div>
 </div>
 
